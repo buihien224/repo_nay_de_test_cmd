@@ -30,9 +30,5 @@ jobs:
         run: |
           sudo apt install -y policycoreutils
           sestatus
-          sudo setenforce 0
-          sestatus
-          cd $GITHUB_WORKSPACE
-          ls -Z
-          chcon system_u:object_r:httpd_config_t:s0 README.md
+          /etc/selinux/config
 
