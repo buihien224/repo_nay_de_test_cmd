@@ -29,6 +29,7 @@ jobs:
       - name: test
         run: |
           sudo apt install -y policycoreutils
+          sudo reboot
           sestatus
           sudo cat /etc/selinux/config
 
