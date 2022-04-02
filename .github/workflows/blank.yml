@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: test
         run: |
-          sudo apt install -y policycoreutils
+          sudo apt-get install policycoreutils selinux-utils selinux-basics -y
           sudo selinux-activate
           sudo selinux-config-enforcing
           sestatus
